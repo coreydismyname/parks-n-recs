@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Park</h1>
+  <div class="col-md-6 offset-md-3">
+    <form action="/parks" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="title" name="park[title]" required />
+        <div class="valid-feedback">
+          Looks Good!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="park[location]"
+          required
+        />
+        <div class="valid-feedback">
+          Looks Good!
+        </div>
+      </div>
+      
+           <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="park[description]"
+          required
+        /></textarea>
+        <div class="valid-feedback">
+          Looks Good!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image(s)</label>
+        <input class="form-control" type="file" id="image" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add Park</button>
+      </div>
+    </form>
+    <a href="/parks">All Parks</a>
+  </div>
+</div>
